@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALOG_CLOCK</title>
+    <link href="analog.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+        <div class="number number1">1</div>
+        <div class="number number2">2</div>
+        <div class="number number3">3</div>
+        <div class="number number4">4</div>
+        <div class="number number5">5</div>
+        <div class="number number6">6</div>
+        <div class="number number7">7</div>
+        <div class="number number8">8</div>
+        <div class="number number9">9</div>
+        <div class="number number10">10</div>
+        <div class="number number11">11</div>
+        <div class="number number12">12</div>
+    </div>
+
+    <script>
+        setInterval(() => {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var hrotation = (30 * h) + m / 2;
+            var mrotation = (6 * m);
+            var srotation = (6 * s);
+            var second = document.querySelector(".second");
+            var minute = document.querySelector(".minute");
+            var hour = document.querySelector(".hour");
+
+            hour.style.webkitTransform = hour.style.mozTransform = hour.style.transform = `rotate(${hrotation}deg)`;
+            minute.style.webkitTransform = minute.style.mozTransform = minute.style.transform = `rotate(${mrotation}deg)`;
+            second.style.webkitTransform = second.style.mozTransform = second.style.transform = `rotate(${srotation}deg)`;
+        }, 1000);
+    </script>
+</body>
+
+</html>

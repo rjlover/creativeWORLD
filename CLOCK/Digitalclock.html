@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+</head>
+<style>
+    body {
+        background-color: rgb(49, 37, 37);
+    }
+
+    body h2 {
+        color: white;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main {
+        margin: 10px;
+    }
+
+    .btn-move {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        cursor: pointer;
+        background-color: rgb(115, 245, 245);
+        border-radius: 10px;
+        font-size: 1.5rem;
+        outline: none;
+    }
+
+    #show {
+        color: rgb(247, 168, 168);
+        font-size: 3.5rem;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>To see our digital watch, click the start!</h2>
+            <div class="btn-move">
+                <button class="btn" onclick="digitalwatchshow()">Start</button>
+            </div>
+        </div>
+        <div id=show></div>
+        <div class="main">
+            <div class="btn-move">
+                <button class="btn" onclick="clearInterval(w)">STOP</button>
+            </div>
+            <h2>To stop it,click STOP!</h2>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var w;
+        function digitalwatchshow() {
+            w = setInterval(clocktiming, 1000);
+
+            function clocktiming() {
+                var c = new Date();
+                var clock = c.toLocaleTimeString();
+                document.getElementById('show').innerHTML = clock;
+            }
+        }
+    </script>
+</body>
+
+</html>

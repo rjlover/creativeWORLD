@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url(back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  font-family: "Luckiest Guy", cursive;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.container h1 {
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-size: 40px;
+}
+.main {
+  border: 2px solid rgb(243, 232, 232);
+  background-color: grey;
+  width: 660px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 30px;
+}
+.input-name {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  align-items: center;
+}
+.input-name label {
+  /* font-weight: bolder; */
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(247, 244, 90);
+}
+.input-name input {
+  width: 181px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 4px 1px;
+  border-radius: 14px;
+  outline: none;
+  background-color: rgb(253, 240, 185);
+  font-size: 18px;
+}
+.photo-frame {
+  /* border: 1px solid coral; */
+  /* background-color: white; */
+  /* border-radius: 5px; */
+}
+.click {
+  position: relative;
+  top: 20px;
+}
+button {
+  font-size: 26px;
+  padding: 5px;
+  border-radius: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 170px;
+  cursor: pointer;
+  background-color: rgb(3, 66, 45);
+  transition: background-color 1s;
+}
+button:hover {
+  background-color: white;
+}

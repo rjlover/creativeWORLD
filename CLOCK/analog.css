@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: linear-gradient(to right, rgb(103, 214, 248), rgb(208, 250, 94));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgb(17, 2, 53);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  background: linear-gradient(140deg, #81d2e7, #cbfafb);
+  box-shadow: 2px 2px 12px rgb(3, 66, 75);
+}
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.number {
+  /* --rotation:0; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  /* transform: rotate(--rotation); */
+}
+.number1 {
+  transform: rotate(30deg);
+  /* --rotation:30deg; */
+}
+.number2 {
+  transform: rotate(60deg);
+  /* --rotation:60deg; */
+}
+.number3 {
+  transform: rotate(90deg);
+  /* --rotation:90deg; */
+}
+.number4 {
+  transform: rotate(120deg);
+  /* --rotation:1200deg; */
+}
+.number5 {
+  transform: rotate(150deg);
+  /* --rotation:150deg; */
+}
+.number6 {
+  transform: rotate(180deg);
+  /* --rotation:180deg; */
+}
+.number7 {
+  transform: rotate(210deg);
+  /* --rotation:210deg; */
+}
+.number8 {
+  transform: rotate(240deg);
+  /* --rotation:240deg; */
+}
+.number9 {
+  transform: rotate(270deg);
+  /* --rotation:270deg; */
+}
+.number10 {
+  transform: rotate(300deg);
+  /* --rotation:300deg; */
+}
+.number11 {
+  transform: rotate(330deg);
+  /* --rotation:330deg; */
+}
+.number12 {
+  transform: rotate(360deg);
+  /* --rotation:360deg; */
+}
+.hour {
+  position: absolute;
+  width: 2%;
+  height: 30%;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(20, 18, 18);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  transform-origin: bottom;
+}
+.minute {
+  position: absolute;
+  width: 1.6%;
+  height: 40%;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(38, 18, 221);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+}
+.second {
+  position: absolute;
+  width: 1%;
+  height: 47%;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(243, 10, 10);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+}
