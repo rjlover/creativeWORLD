@@ -1,0 +1,164 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(10, 1, 24);
+  display: grid;
+  place-items: center;
+}
+
+.music_container {
+  width: 32rem;
+  height: 47rem;
+  background-color: #f1d0d0;
+  border-radius: 2rem;
+  box-shadow: 0 1.2rem 1.5rem 0.5rem rgba(84, 79, 94, 0.5);
+  text-align: center;
+  padding: 2rem;
+}
+.music_container #song_name {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.3rem;
+  color: #171717;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+.music_container #artist_name {
+  color: #8d8989;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  font-weight: 200;
+}
+
+.img_container {
+  width: 20rem;
+  height: 20rem;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* border: 2px solid red; */
+  object-fit: cover;
+  box-shadow: 0 1.2rem 3rem 0.7rem rgba(0, 0, 0, 0.5);
+}
+
+.music_controls_container {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.music_controls_container .fas {
+  color: #111111;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(0 2rem 3rem 1rem rgba(0, 0, 0, 0.4));
+}
+
+.music_controls_container .main_button {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  background-color: #111111;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music_controls_container .fas:hover {
+  color: rgb(77, 74, 74);
+}
+
+.music_controls_container .fa-play:hover {
+  background-color: #ffffff;
+  color: #111111;
+  box-shadow: 0 1rem 2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.anime {
+  animation: rotatePlayer 3s linear infinite;
+}
+@keyframes rotatePlayer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.progressbar_container {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  margin-top: 0.8rem;
+}
+.progress_time_div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+.progress_line_div {
+  width: 100%;
+  height: 0.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07);
+  /* we can also use it instant of box shadow [background-color: #f7f5f5;]*/
+  position: relative;
+  margin-top: 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  /* 
+  transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -o-transition: width 1s linear;
+  -webkit-transition: width 1s linear;
+
+  appearance: none;
+  -webkit-appearance: none; */
+}
+.current_progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #332222;
+  border-radius: 40px;
+  cursor: pointer;
+
+  transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -o-transition: width 1s linear;
+  -webkit-transition: width 1s linear;
+
+  appearance: none;
+  -webkit-appearance: none;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJ-calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="calculator_div">
+            <div class="calculator_header">
+                <h3>RJ-calculator</h3>
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <div id="history_icon">
+                    <i class="fas fa-history"></i>
+                </div>
+            </div>
+            <div class="calculator_body">
+                <p id="input"></p>
+                <h1 id="output">0</h1>
+            </div>
+            <div class="calculator_footer">
+                <div class="symbol" onclick="calculate('C')"><span>C</span></div>
+                <div class="symbol" onclick="calculate('AC')"><span>AC</span></div>
+                <div class="symbol" onclick="calculate('%')"><span>%</span></div>
+                <div class="symbol" onclick="calculate('/')"><span>/</span></div>
+                <div onclick="clickPlayMusic(),calculate(7)"><span>7</span></div>
+                <div onclick="clickPlayMusic(),calculate('8')"><span>8</span></div>
+                <div onclick="clickPlayMusic(),calculate('9')"><span>9</span></div>
+                <div class="symbol" onclick="calculate('*')"><span>*</span></div>
+                <div onclick="clickPlayMusic(),calculate('4')"><span>4</span></div>
+                <div onclick="clickPlayMusic(),calculate('5')"><span>5</span></div>
+                <div onclick="clickPlayMusic(),calculate('6')"><span>6</span></div>
+                <div class="symbol" onclick="calculate('-')"><span>-</span></div>
+                <div onclick="clickPlayMusic(),calculate('1')"><span>1</span></div>
+                <div onclick="clickPlayMusic(),calculate('2')"><span>2</span></div>
+                <div onclick="clickPlayMusic(),calculate('3')"><span>3</span></div>
+                <div class="symbol" onclick="calculate('+')"><span>+</span></div>
+                <div onclick="clickPlayMusic(),calculate('0')"><span>0</span></div>
+                <div onclick="clickPlayMusic(),calculate('00')"><span>00</span></div>
+                <div onclick="clickPlayMusic(),calculate('.')"><span>.</span></div>
+                <div class="equal_symbol" onclick="calculate('='),historyCheck()"><span>=</span></div>
+            </div>
+
+        </div>
+        <audio id="clickSound" src="click.mp3"></audio>
+        <div class="history">
+            <h2>history</h2>
+            <div id="child">
+                <p id="result"></p>
+            </div>
+            <div class="footer">
+
+                <button id="btn">CLEAR</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
